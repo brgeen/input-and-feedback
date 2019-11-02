@@ -6,9 +6,13 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
-const reducer = (state =[], action)=>{
-    if(action.type==="FEELING"){
-        return action.payload
+const reducer = (state = [], action) => {
+    if (action.type === "FEELING") {
+        return [action.payload]
+    }
+
+    if (action.type === "UNDERSTANDING") {
+        return [...state, action.payload]
     }
     return state
 }
@@ -17,7 +21,7 @@ const reducer = (state =[], action)=>{
 
 const storeInstance = createStore(
     combineReducers({
-      reducer,
+        reducer,
     }),
     applyMiddleware(logger),
 );

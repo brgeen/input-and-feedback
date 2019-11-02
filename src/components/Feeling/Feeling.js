@@ -8,7 +8,6 @@ class Feeling extends Component {
         feeling: '',
     }
 
-
     handleInput = (event) => {
         this.setState({
           feeling: event.target.value, 
@@ -16,7 +15,7 @@ class Feeling extends Component {
     }
 
     handleClick = () => {
-        this.props.dispatch({type: "FEELING", payload: this.state.feeling })
+        this.props.dispatch({type: "FEELING", payload: this.state })
     }
     render() {
         return (
@@ -27,6 +26,7 @@ class Feeling extends Component {
                 onChange={(event) => this.handleInput(event)}
                 value={this.state.feeling}
                 type="number"></input>
+
                 <Link to="/Understanding"><button onClick={this.handleClick}>Next</button></Link>
             <pre>{JSON.stringify(this.state.feeling, null, 2)}</pre>
             </div>
