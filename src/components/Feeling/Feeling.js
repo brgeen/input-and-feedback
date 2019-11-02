@@ -5,12 +5,11 @@ class Feeling extends Component {
     render() {
         return (
 
-            <div >
-                <header className="App-header">
-                    <h1 className="App-title">Feeling!</h1>
-                </header>
+            <div>
+                <h3>How are you feeling today?</h3>
+                <input type="number"></input>
                 <Link to="/Understanding"><button>Next</button></Link>
-                <br />
+
             </div>
 
         );

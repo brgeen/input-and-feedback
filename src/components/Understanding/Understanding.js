@@ -6,13 +6,12 @@ class Understanding extends Component {
     render() {
         return (
 
-            <div >
-                <header className="App-header">
-                    <h1 className="App-title">Understanding!</h1>
-                </header>
-                <Link to="/Supported"><button>Next</button></Link>
-                <br />
-            </div>
+            <div>
+            <h3>How well are you understanding the content?</h3>
+            <input type="number"></input>
+            <Link to="/Supported"><button>Next</button></Link>
+
+        </div>
 
         );
     }

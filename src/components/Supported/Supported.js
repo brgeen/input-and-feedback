@@ -6,13 +6,12 @@ class Supported extends Component {
     render() {
         return (
 
-            <div >
-                <header className="App-header">
-                    <h1 className="App-title">Supported!</h1>
-                </header>
-                <Link to="/Comments"><button>Next</button></Link>
-                <br />
-            </div>
+            <div>
+            <h3>How well are you being supported?</h3>
+            <input type="number"></input>
+            <Link to="/Comments"><button>Next</button></Link>
+
+        </div>
 
         );
     }

@@ -6,13 +6,12 @@ class Comments extends Component {
     render() {
         return (
 
-            <div >
-                <header className="App-header">
-                    <h1 className="App-title">Comments!</h1>
-                </header>
-                <Link to="/Submit"><button>Next</button></Link>
-                <br />
-            </div>
+            <div>
+            <h3>Any comments you would like to leave?</h3>
+            <input type="text"></input>
+            <Link to="/Review"><button>Next</button></Link>
+
+        </div>
 
         );
     }

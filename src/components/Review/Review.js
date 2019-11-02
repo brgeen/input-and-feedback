@@ -7,11 +7,9 @@ class Review extends Component {
         return (
 
             <div >
-                <header className="App-header">
-                    <h1 className="App-title">Review!</h1>
-                </header>
-                <Link to="/"><button>Next</button></Link>
-                <br />
+               <h3>Review</h3>
+                <Link to="/Submitted"><button>Submit</button></Link>
+             
             </div>
 
         );
