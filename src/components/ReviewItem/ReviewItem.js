@@ -5,15 +5,23 @@ import React, { Component } from 'react';
 
 class ReviewItem extends Component {
 
+    getObjectKey = (object) => {
+        return Object.keys(object);
+    }
+
+    getObjectKeyToRender = (object) => {
+        let key = Object.keys(object).toString();
+        return key[0].toUpperCase() + key.slice(1, key.length);
+    }
+
+
+
     render() {
         return (
 
             <>
-                {/* <p key={}>Feeling: {item.feeling}</p>
-                <p key={}>Understanding: {item.understanding}</p>
-                <p key={}>Supported: {item.supported}</p>
-                <p key={}>Comments: {item.comments}</p> */}
-                {JSON.stringify(this.props.item, null, 2)}
+                <p >{this.getObjectKeyToRender(this.props.item)}: {this.props.item[this.getObjectKey(this.props.item)]}</p>
+
             </>
 
         );
