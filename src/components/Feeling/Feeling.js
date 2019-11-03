@@ -9,26 +9,36 @@ class Feeling extends Component {
     }
 
     handleInput = (event) => {
-        this.setState({
-          feeling: event.target.value, 
-        })
+        console.log(event.target.value);
+
+        const validateNums = event.target.value > 0 && event.target.value < 6;
+        const validateEmptyField = event.target.value === '';
+
+
+        if (validateNums || validateEmptyField) {
+            this.setState({
+                feeling: event.target.value,
+            })
+        }
     }
 
     handleClick = () => {
-        this.props.dispatch({type: "FEELING", payload: this.state })
+        this.props.dispatch({ type: "FEELING", payload: this.state })
     }
     render() {
         return (
 
             <div>
                 <h3>How are you feeling today?</h3>
-                <input 
-                onChange={(event) => this.handleInput(event)}
-                value={this.state.feeling}
-                type="number"></input>
+                <input
+                    onChange={(event) => this.handleInput(event)}
+                    value={this.state.feeling}
+                    type="number"></input>
 
                 <Link to="/Understanding"><button onClick={this.handleClick}>Next</button></Link>
-            <pre>{JSON.stringify(this.state.feeling, null, 2)}</pre>
+
+                {this.state.feeling.length === 0 ? <p>Please enter a number 1 through 5</p> : <p>Thank you!</p>}
+                <pre>{JSON.stringify(this.state.feeling, null, 2)}</pre>
             </div>
 
         );

@@ -14,7 +14,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     console.log('POST /feedback');
-    console.log(req.body);
     
     pool.query(`INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
     VALUES ($1, $2, $3, $4);`, [req.body[0].feeling, req.body[1].understanding, req.body[2].supported, req.body[3].comments])
