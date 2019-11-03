@@ -33,7 +33,7 @@ class Feeling extends Component {
                 <input
                     onChange={(event) => this.handleInput(event)}
                     value={this.state.feeling}
-                    type="number"></input>
+                    type="text"></input>
 
                 
 

@@ -9,13 +9,13 @@ class Comments extends Component {
         comments: '',
     }
 
-    inputHandle = (event) => {
+    handleInput = (event) => {
         this.setState({
             comments: event.target.value
         })
     }
 
-    clickHandle = () => {
+    handleClick = () => {
         this.props.dispatch({ type: "COMMENTS", payload: this.state })
     }
 
@@ -26,10 +26,10 @@ class Comments extends Component {
                 <h3>Any comments you would like to leave?</h3>
                 <input
                     type="text"
-                    onChange={(event) => this.inputHandle(event)}
+                    onChange={(event) => this.handleInput(event)}
                     value={this.state.comments}>
                 </input>
-                <Link to="/Review"><button onClick={() => this.clickHandle()}>Next</button></Link>
+                <Link to="/Review"><button onClick={() => this.handleClick()}>Next</button></Link>
                 <pre>{JSON.stringify(this.state.comments, null, 2)}</pre>
             </div>
 

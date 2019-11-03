@@ -10,13 +10,21 @@ class Understanding extends Component {
         understanding: '',
     }
 
-    inputHandle = (event) => {
-        this.setState({
-            understanding: event.target.value
-        })
+    handleInput = (event) => {
+        console.log(event.target.value);
+
+        const validateNums = event.target.value > 0 && event.target.value < 6;
+        const validateEmptyField = event.target.value === '';
+
+
+        if (validateNums || validateEmptyField) {
+            this.setState({
+                understanding: event.target.value,
+            })
+        }
     }
 
-    clickHandle = () => {
+    handleClick = () => {
         this.props.dispatch({ type: "UNDERSTANDING", payload: this.state })
     }
 
@@ -27,11 +35,12 @@ class Understanding extends Component {
                 <h3>How well are you understanding the content?</h3>
                 <input
                     value={this.state.understanding}
-                    onChange={(event) => this.inputHandle(event)}
-                    type="number">
+                    onChange={(event) => this.handleInput(event)}
+                    type="text">
 
                 </input>
-                <Link to="/Supported"><button onClick={() => this.clickHandle()}>Next</button></Link>
+                {this.state.understanding.length === 0 && <h5>Please enter a number 1 through 5</h5>}
+                {this.state.understanding.length > 0 && <Link to="/Supported"><button onClick={this.handleClick}>Next</button></Link>}
                 <pre>{JSON.stringify(this.state.understanding, null, 2)}</pre>
 
             </div>

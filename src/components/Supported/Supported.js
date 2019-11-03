@@ -9,13 +9,21 @@ class Supported extends Component {
         supported: '',
     }
 
-    inputHandle = (event) => {
-        this.setState({
-            supported: event.target.value
-        })
+    handleInput = (event) => {
+        console.log(event.target.value);
+
+        const validateNums = event.target.value > 0 && event.target.value < 6;
+        const validateEmptyField = event.target.value === '';
+
+
+        if (validateNums || validateEmptyField) {
+            this.setState({
+                supported: event.target.value,
+            })
+        }
     }
 
-    buttonClick = () => {
+    handleClick = () => {
         this.props.dispatch({ type: "SUPPORTED", payload: this.state })
     }
 
@@ -25,11 +33,12 @@ class Supported extends Component {
             <div className="input-container">
                 <h3>How well are you being supported?</h3>
                 <input
-                    type="number"
+                    type="text"
                     value={this.state.supported}
-                    onChange={(event) => this.inputHandle(event)}>
+                    onChange={(event) => this.handleInput(event)}>
                 </input>
-                <Link to="/Comments"><button onClick={() => this.buttonClick()}>Next</button></Link>
+                {this.state.supported.length === 0 && <h5>Please enter a number 1 through 5</h5>}
+                {this.state.supported.length > 0 && <Link to="/Comments"><button onClick={this.handleClick}>Next</button></Link>}
                 <pre>{JSON.stringify(this.state.supported, null, 2)}</pre>
             </div>
 

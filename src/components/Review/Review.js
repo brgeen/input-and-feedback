@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import ReviewItem from '../ReviewItem/ReviewItem';
 
 
 
@@ -30,10 +31,11 @@ class Review extends Component {
                 <div>
                     {this.props.feedbackScoreReducer.map(item =>
                         <>
-                            <p key={this.props.feedbackScoreReducer}>Feeling: {item.feeling}</p>
-                            <p key={this.props.feedbackScoreReducer}>Understanding: {item.understanding}</p>
-                            <p key={this.props.feedbackScoreReducer}>Supported: {item.supported}</p>
-                            <p key={this.props.feedbackScoreReducer}>Comments: {item.comments}</p>
+                        <ReviewItem item={item}/>
+                            {/* <p key={}>Feeling: {item.feeling}</p>
+                            <p key={}>Understanding: {item.understanding}</p>
+                            <p key={}>Supported: {item.supported}</p>
+                            <p key={}>Comments: {item.comments}</p> */}
                         </>
                     )}
                 </div>
