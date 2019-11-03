@@ -22,7 +22,7 @@ class Supported extends Component {
     render() {
         return (
 
-            <div>
+            <div className="input-container">
                 <h3>How well are you being supported?</h3>
                 <input
                     type="number"

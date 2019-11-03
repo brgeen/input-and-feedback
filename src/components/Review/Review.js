@@ -25,15 +25,15 @@ class Review extends Component {
     render() {
         return (
 
-            <div >
+            <div className="input-container" >
                 <h3>Review</h3>
                 <div>
                     {this.props.feedbackScoreReducer.map(item =>
                         <>
-                            <p key={item.feeling}>{item.feeling}</p>
-                            <p key={item.understanding}>{item.understanding}</p>
-                            <p key={item.supported}>{item.supported}</p>
-                            <p key={item.comments}>{item.comments}</p>
+                            <p key={this.props.feedbackScoreReducer}>Feeling: {item.feeling}</p>
+                            <p key={this.props.feedbackScoreReducer}>Understanding: {item.understanding}</p>
+                            <p key={this.props.feedbackScoreReducer}>Supported: {item.supported}</p>
+                            <p key={this.props.feedbackScoreReducer}>Comments: {item.comments}</p>
                         </>
                     )}
                 </div>

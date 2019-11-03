@@ -23,7 +23,7 @@ class Understanding extends Component {
     render() {
         return (
 
-            <div>
+            <div className="input-container">
                 <h3>How well are you understanding the content?</h3>
                 <input
                     value={this.state.understanding}

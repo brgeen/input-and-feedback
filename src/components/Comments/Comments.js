@@ -22,7 +22,7 @@ class Comments extends Component {
     render() {
         return (
 
-            <div>
+            <div className="input-container">
                 <h3>Any comments you would like to leave?</h3>
                 <input
                     type="text"

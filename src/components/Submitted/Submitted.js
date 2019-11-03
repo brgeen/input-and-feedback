@@ -6,7 +6,7 @@ class Submitted extends Component {
     render() {
         return (
 
-            <div >
+            <div className="input-container">
                <h3>Thank you!</h3>
                 <Link to="/"><button>Leave new feedback</button></Link>
                
