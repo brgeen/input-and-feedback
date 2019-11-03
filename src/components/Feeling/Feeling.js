@@ -35,9 +35,10 @@ class Feeling extends Component {
                     value={this.state.feeling}
                     type="number"></input>
 
-                <Link to="/Understanding"><button onClick={this.handleClick}>Next</button></Link>
+                
 
                 {this.state.feeling.length === 0 && <h5>Please enter a number 1 through 5</h5>}
+                {this.state.feeling.length > 0 && <Link to="/Understanding"><button onClick={this.handleClick}>Next</button></Link>}
                 <pre>{JSON.stringify(this.state.feeling, null, 2)}</pre>
             </div>
 
