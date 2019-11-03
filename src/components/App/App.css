@@ -1,13 +1,16 @@
 .App {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: 'Arvo', serif;
+
 }
 
 .App-header {
-  background-color: #033076;
+  /* background-color: #033076; */
   min-height: 70px;
   padding: 20px;
-  color: white;
+  /* color: white; */
 }
 
 .App-title {
@@ -33,6 +36,9 @@ input {
 button {
   margin-top: 15px;
   padding: 5px;
+  font-family: 'Arvo', serif;
+  /* font-variant-caps: small-caps; */
+
 }
 
 textarea {

@@ -14,8 +14,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <h1 className="App-title">Feedback!</h1>
-            <h4><i>Don't forget it!</i></h4>
+            <h1 className="App-title">Input & Feedback</h1>
           </header>
           <Route path="/" exact component={Feeling} />
           <Route path="/Understanding" component={Understanding} />

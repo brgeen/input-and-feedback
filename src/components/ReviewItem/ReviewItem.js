@@ -14,7 +14,9 @@ class ReviewItem extends Component {
     render() {
         return (
             <>
-                <h5>{this.getObjectKeyToRender(this.props.item)}</h5>
+
+            {/* {this.getObjectKeyToRender(this.props.item) !== 'Comments' ? <p>True</p> : <p>False</p> } */}
+                <h4>{this.getObjectKeyToRender(this.props.item)}</h4>
                 <p>{this.props.item[this.getObjectKey(this.props.item)]}</p>
             </>
         );
