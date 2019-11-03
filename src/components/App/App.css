@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-header {
@@ -32,5 +33,10 @@ input {
 button {
   margin-top: 15px;
   padding: 5px;
+}
+
+textarea {
+  text-align: center;
+  outline: none;
 }
 

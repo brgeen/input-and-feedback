@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {connect} from 'react-redux';
-
+import { connect } from 'react-redux';
 
 class Comments extends Component {
 
@@ -21,18 +20,19 @@ class Comments extends Component {
 
     render() {
         return (
-
             <div className="input-container">
                 <h3>Any comments you would like to leave?</h3>
-                <input
+
+                <textarea
+                    rows="4"
+                    cols="50"
                     type="text"
                     onChange={(event) => this.handleInput(event)}
                     value={this.state.comments}>
-                </input>
-                <Link to="/Review"><button onClick={() => this.handleClick()}>Next</button></Link>
-                <pre>{JSON.stringify(this.state.comments, null, 2)}</pre>
-            </div>
+                </textarea>
 
+                <Link to="/Review"><button onClick={() => this.handleClick()}>Next</button></Link>
+            </div>
         );
     }
 }
