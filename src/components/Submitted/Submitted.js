@@ -7,9 +7,9 @@ class Submitted extends Component {
         return (
 
             <div className="input-container">
-                <h3>We have received your feedback.</h3>
+                <h3>We received your feedback.</h3>
                 <h4>Thank you!</h4>
-                <Link to="/"><button>Leave new feedback</button></Link>
+                <Link to="/"><button>C R E A T E - N E W - F E E B A C K</button></Link>
 
             </div>
 

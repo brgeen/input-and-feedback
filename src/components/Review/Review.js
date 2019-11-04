@@ -23,12 +23,12 @@ class Review extends Component {
         return (
             <div className="input-container" >
                 <h3>Review</h3>
-                <div>
-                    {this.props.feedbackScoreReducer.map(item => 
-                        <ReviewItem item={item} />
+                <div className="review-container">
+                    {this.props.feedbackScoreReducer.map((item, index) => 
+                        <ReviewItem key={index} item={item} />
                     )}
                 </div>
-                <Link to="/Submitted"><button onClick={() => this.clickSubmitHandler()}>SUBMIT</button></Link>
+                <Link to="/Submitted"><button onClick={() => this.clickSubmitHandler()}>S U B M I T</button></Link>
             </div>
         );
     }

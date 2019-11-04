@@ -25,13 +25,13 @@ class Comments extends Component {
 
                 <textarea
                     rows="4"
-                    cols="50"
+                    cols="45"
                     type="text"
                     onChange={(event) => this.handleInput(event)}
                     value={this.state.comments}>
                 </textarea>
 
-                <Link to="/Review"><button onClick={() => this.handleClick()}>NEXT</button></Link>
+                <Link to="/Review"><button onClick={() => this.handleClick()}>N E X T</button></Link>
             </div>
         );
     }
