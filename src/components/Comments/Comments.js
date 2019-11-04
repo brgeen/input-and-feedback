@@ -22,7 +22,6 @@ class Comments extends Component {
         return (
             <div className="input-container">
                 <h3>Any comments you would like to leave?</h3>
-
                 <textarea
                     rows="4"
                     cols="45"
@@ -30,7 +29,6 @@ class Comments extends Component {
                     onChange={(event) => this.handleInput(event)}
                     value={this.state.comments}>
                 </textarea>
-
                 <Link to="/Review"><button onClick={() => this.handleClick()}>N E X T</button></Link>
             </div>
         );

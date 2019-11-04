@@ -24,7 +24,7 @@ class Review extends Component {
             <div className="input-container" >
                 <h3>Review</h3>
                 <div className="review-container">
-                    {this.props.feedbackScoreReducer.map((item, index) => 
+                    {this.props.feedbackScoreReducer.map((item, index) =>
                         <ReviewItem key={index} item={item} />
                     )}
                 </div>

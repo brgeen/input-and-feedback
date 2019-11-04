@@ -14,7 +14,6 @@ class Feeling extends Component {
         const validateNums = event.target.value > 0 && event.target.value < 6;
         const validateEmptyField = event.target.value === '';
 
-
         if (validateNums || validateEmptyField) {
             this.setState({
                 feeling: event.target.value,
@@ -34,9 +33,6 @@ class Feeling extends Component {
                     onChange={(event) => this.handleInput(event)}
                     value={this.state.feeling}
                     type="text"></input>
-
-                
-
                 {this.state.feeling.length === 0 && <h5>Please enter a number 1 through 5</h5>}
                 {this.state.feeling.length > 0 && <Link to="/Understanding"><button onClick={this.handleClick}>N E X T</button></Link>}
             </div>

@@ -15,7 +15,6 @@ class Supported extends Component {
         const validateNums = event.target.value > 0 && event.target.value < 6;
         const validateEmptyField = event.target.value === '';
 
-
         if (validateNums || validateEmptyField) {
             this.setState({
                 supported: event.target.value,
@@ -29,7 +28,6 @@ class Supported extends Component {
 
     render() {
         return (
-
             <div className="input-container">
                 <h3>How well are you being supported?</h3>
                 <input
@@ -40,7 +38,6 @@ class Supported extends Component {
                 {this.state.supported.length === 0 && <h5>Please enter a number 1 through 5</h5>}
                 {this.state.supported.length > 0 && <Link to="/Comments"><button onClick={this.handleClick}>N E X T</button></Link>}
             </div>
-
         );
     }
 }

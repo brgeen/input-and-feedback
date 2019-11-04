@@ -14,12 +14,9 @@ class ReviewItem extends Component {
     render() {
         return (
             <>
-
-            {this.getObjectKeyToRender(this.props.item) === 'Comments' ? // ternary for conditionally rendering inline or block responses
-            <h4>{this.getObjectKeyToRender(this.props.item)}: <br/> {this.props.item[this.getObjectKey(this.props.item)]}</h4> : // this renders a block format for the comments heading
-            <h4>{this.getObjectKeyToRender(this.props.item)}: {this.props.item[this.getObjectKey(this.props.item)]}</h4> }
-            
-                
+                {this.getObjectKeyToRender(this.props.item) === 'Comments' ? // ternary for conditionally rendering inline or block responses
+                    <h4>{this.getObjectKeyToRender(this.props.item)}: <br /> {this.props.item[this.getObjectKey(this.props.item)]}</h4> : // this renders a block format for the comments heading
+                    <h4>{this.getObjectKeyToRender(this.props.item)}: {this.props.item[this.getObjectKey(this.props.item)]}</h4>}
             </>
         );
     }
