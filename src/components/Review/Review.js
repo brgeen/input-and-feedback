@@ -38,4 +38,3 @@ const reduxStatetoProps = (reduxState) => {
     return reduxState
 }
 export default (connect(reduxStatetoProps)(Review));
-

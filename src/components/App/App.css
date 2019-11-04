@@ -1,16 +1,12 @@
-
 .App {
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  
 }
 
 .App-header {
   background-color: rgb(255, 202, 69);
   min-height: 70px;
   padding: 20px;
-
- 
 }
 
 .App-title {
@@ -64,5 +60,4 @@ textarea {
 .progress-one {
   height: 20px;
   width: 20px;
-
 }

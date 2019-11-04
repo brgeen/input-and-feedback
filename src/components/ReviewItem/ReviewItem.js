@@ -22,4 +22,3 @@ class ReviewItem extends Component {
     }
 }
 export default ReviewItem;
-

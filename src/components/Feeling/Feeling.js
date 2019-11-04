@@ -29,11 +29,11 @@ class Feeling extends Component {
 
             <div className="input-container">
                 <h3>How are you feeling today?</h3>
-                <input
+                <input 
                     onChange={(event) => this.handleInput(event)}
                     value={this.state.feeling}
                     type="text"></input>
-                {this.state.feeling.length === 0 && <h5>Please enter a number 1 through 5</h5>}
+                {this.state.feeling.length === 0 && <h5>Please enter a number 1 through 5</h5>} 
                 {this.state.feeling.length > 0 && <Link to="/Understanding"><button onClick={this.handleClick}>N E X T</button></Link>}
             </div>
 
