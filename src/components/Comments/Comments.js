@@ -31,7 +31,7 @@ class Comments extends Component {
                     value={this.state.comments}>
                 </textarea>
 
-                <Link to="/Review"><button onClick={() => this.handleClick()}>Next</button></Link>
+                <Link to="/Review"><button onClick={() => this.handleClick()}>NEXT</button></Link>
             </div>
         );
     }

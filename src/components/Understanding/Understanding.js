@@ -40,7 +40,7 @@ class Understanding extends Component {
 
                 </input>
                 {this.state.understanding.length === 0 && <h5>Please enter a number 1 through 5</h5>}
-                {this.state.understanding.length > 0 && <Link to="/Supported"><button onClick={this.handleClick}>Next</button></Link>}
+                {this.state.understanding.length > 0 && <Link to="/Supported"><button onClick={this.handleClick}>NEXT</button></Link>}
 
             </div>
 

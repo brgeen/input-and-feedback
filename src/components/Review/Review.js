@@ -28,7 +28,7 @@ class Review extends Component {
                         <ReviewItem item={item} />
                     )}
                 </div>
-                <Link to="/Submitted"><button onClick={() => this.clickSubmitHandler()}>Submit</button></Link>
+                <Link to="/Submitted"><button onClick={() => this.clickSubmitHandler()}>SUBMIT</button></Link>
             </div>
         );
     }

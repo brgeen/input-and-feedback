@@ -38,7 +38,7 @@ class Supported extends Component {
                     onChange={(event) => this.handleInput(event)}>
                 </input>
                 {this.state.supported.length === 0 && <h5>Please enter a number 1 through 5</h5>}
-                {this.state.supported.length > 0 && <Link to="/Comments"><button onClick={this.handleClick}>Next</button></Link>}
+                {this.state.supported.length > 0 && <Link to="/Comments"><button onClick={this.handleClick}>NEXT</button></Link>}
             </div>
 
         );

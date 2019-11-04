@@ -38,7 +38,7 @@ class Feeling extends Component {
                 
 
                 {this.state.feeling.length === 0 && <h5>Please enter a number 1 through 5</h5>}
-                {this.state.feeling.length > 0 && <Link to="/Understanding"><button onClick={this.handleClick}>Next</button></Link>}
+                {this.state.feeling.length > 0 && <Link to="/Understanding"><button onClick={this.handleClick}>N E X T</button></Link>}
             </div>
 
         );
