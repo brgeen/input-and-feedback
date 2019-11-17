@@ -27,7 +27,8 @@ This is a feedback form for educators that is used to gather daily input from th
 
 ## Installation
 
-- Heroku deployment and link coming soon
+- Visit Heroku at
+- https://input-and-feedback.herokuapp.com/#/
 
 
 ## Contact
